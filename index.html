@@ -298,7 +298,7 @@ function renderQuestions() {
       audioBlock = `
         <div class="audio-player-box">
           <div class="audio-meta">
-            <span>🎧 청해 음원 (第${q.sub_q_num}問)</span>
+            <span>🎧 청해 음원 (${q.mondai} 第${q.q_num}問)</span>
             <div class="audio-speeds">
               <span style="font-size: 11.5px; color: #0284C7; margin-right: 4px;">배속:</span>
               <button class="btn-speed active" onclick="setSpeed(this, '${q.id}_audio', 1.0)">1.0x</button>
@@ -325,9 +325,9 @@ function renderQuestions() {
       <div class="question-card" id="card_${q.id}">
         <div class="card-header">
           <div class="badges-group">
-            <span class="badge badge-vol">${q.vol_title}</span>
-            <span class="badge badge-sec">${q.section_title} (${q.section_jp})</span>
-            <span class="badge badge-num">문항 #${q.q_idx} (제${q.sub_q_num}문)</span>
+            <span class="badge badge-vol">${q.vol_label}</span>
+            <span class="badge badge-sec">${q.section_label} (${q.mondai})</span>
+            <span class="badge badge-num">문항 #${q.q_num}</span>
           </div>
           <div style="font-size: 13px; font-weight: 800; color: #64748B;">
             ${q.options_count}지선다
